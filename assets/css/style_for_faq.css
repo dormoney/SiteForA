@@ -79,7 +79,9 @@ button {
     color: inherit;
     font-family: inherit;
 }
-
+.gipomonstresquipedalophobia{
+    display: flex;
+}
 .container {
     max-width: 1420px;
     margin: 0 auto;
