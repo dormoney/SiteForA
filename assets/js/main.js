@@ -53,24 +53,6 @@ accTitles.forEach((item) =>
     }
   })
 );
-function obs(entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      toTop.classList.add("active");
-    } else toTop.classList.remove("active");
-  });
-}
-const options = {
-  rootMargin: "0px",
-  threshold: 0,
-};
-
-const observer = new IntersectionObserver(obs, options);
-const toTop = document.querySelector(".to_top");
-const footer = document.querySelector("footer");
-
-observer.observe(footer);
-
 const eventsAll = document.querySelector('.tim_wrapper-all'); 
 const events = document.querySelector('.tim_wrapper'); 
 const showEvent = document.querySelector('.tim_btn.btn');
