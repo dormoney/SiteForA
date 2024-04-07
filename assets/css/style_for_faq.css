@@ -79,8 +79,21 @@ button {
     color: inherit;
     font-family: inherit;
 }
-.gipomonstresquipedalophobia{
-    display: flex;
+::-webkit-scrollbar {
+    width:10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eeecec;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-txt);
+    transition: .3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0e5cd1; 
 }
 .container {
     max-width: 1420px;
@@ -89,11 +102,13 @@ button {
 .copy_fix{
     background-color: #0F3063 !important;
 }
+
 .header_fix{
     margin-block-end: 0;
 }
 .df_fix{
     display: flex;
+    justify-content: center;
 }
 /*! header!*/
 
@@ -102,14 +117,42 @@ button {
     background-color: var(--clr-txt);
     color: var(--clr-bg);
 }
-
+.accordeon__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: .025em;
+    line-height: 135%;
+    transition: ease-in-out .2s;
+}
+.accordeon__item {
+    padding: 15px;
+    display: flex;
+    align-items: start;
+}
+.accordeon__text {
+    height: 0;
+    margin: 0;
+    letter-spacing: .025em;
+    color: #7a7a7a;
+    line-height: 135%;
+    overflow: hidden;
+    transition: ease-in-out .2s;
+}
+.elementor-item-active{
+    color: #7a7a7a !important;
+    text-decoration: none !important;
+}
+.elementor-item-active:hover{
+    color: #0e5cd1 !important;
+    text-decoration: underline !important;
+}
 .header_inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 20px 0;
 }
-
 .header_link {
     font-size: 14px;
     font-weight: 400;
@@ -145,10 +188,13 @@ button {
     transform: scale(1);
     color: #1e5fc0;
 }
-
+.contact_info{
+    display: flex;
+    gap: 30px;
+}
 .header_logo {
     display: flex;
-    gap: 4px;
+    gap: 50px;
     align-items: center;
     cursor: pointer;
 
@@ -156,6 +202,7 @@ button {
 
 .header_logo-title {
     font-size: 19px;
+
     font-weight: 400;
     text-align: center;
     max-width: 670px;
@@ -173,7 +220,6 @@ button {
 .phone-text {
     display: flex;
     flex-direction: column;
-    gap: 7px;
     align-items: flex-end;
 }
 
@@ -205,14 +251,16 @@ button {
 
 .burger_menu {
     display: none;
-
 }
 
 
 /*! menu!*/
 .menu {
-    margin-top: 33px;
-    padding: 0px 0px 23px 0;
+    padding: 23px 0px 23px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #FFF;
     border-bottom: 1px solid var(--clr-txt-sec);
 }
 
@@ -830,6 +878,7 @@ button {
 
 .tim_item-text {
     width: 100%;
+    width: 450px;
     padding: 13px 0 13px 26px;
     font-size: 18px;
     font-weight: 500;
@@ -871,12 +920,12 @@ button {
     width: 100%;
     padding-top: 100px;
     justify-content: space-between;
-
 }
 
 .acc_wrapper-first,
 .acc_wrapper-sec {
     display: flex;
+    grid-template-columns: (2, 1fr);
     flex-direction: column;
     gap: 20px;
 }
@@ -1035,7 +1084,6 @@ button {
     display: flex;
     flex-direction: column;
 }
-
 .tim_subtitle {
     margin-top: 94px;
 
@@ -1262,7 +1310,29 @@ button {
     transition: .6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 }
-
+.img_shadow{
+    border-radius: 30px;
+    width: 700px;
+    height: 500px;
+    box-shadow: inset 0px 0px 10px 10px white;
+}
+.banner_img{
+    width: 700px;
+    height: 499px;
+    display: flex;
+    object-position: 0 0;
+    border-radius: 30px;
+    position: relative;
+    object-fit:cover;
+    z-index: -1;
+}
+.tim_sub-text{
+    padding: 0 300px 0 5px;
+    margin-top: 40px;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 18px;
+}
 .to_top {
     position: fixed;
     bottom: 32px;
@@ -1272,13 +1342,14 @@ button {
     border-radius: 100px;
     padding: 22px 20px;
     opacity: 0;
-    visibility: hidden;
+    visibility: visible;
     transform: translateY(200px);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 5px;
+    z-index: 1;
     transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 }

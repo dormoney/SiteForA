@@ -274,7 +274,69 @@ button {
 }
 
 /*! menu!*/
-
+.main_body{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.125);
+    height: 100%;
+}
+.content_bar{
+    margin: 25px 0 25px 0;
+    padding: 15px;
+    background-color: #fff;
+    width: 70%;
+    height: 100%;
+}
+.header2{
+    background-color: #0F3063;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+}
+.userQ{
+    padding: 13px 20px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+}
+.page_name{
+    font-size: 24px;
+    color: #000;
+    font-weight: 600;
+    padding: 0 0 20px 0;
+    margin: 0 0 15px 0;
+    font-family: Roboto, sans-serif;
+    border-bottom: 1px solid #000;
+}
+.accordeon__title {
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    padding: 0 0 15px 0 ;
+    margin: 0;
+    letter-spacing: .025em;
+    line-height: 135%;
+    transition: ease-in-out .2s;
+}
+.accordeon__item {
+    padding: 15px;
+    display: flex;
+    align-items: start;
+}
+.accordeon__text {
+    height: 0;
+    margin: 0;
+    letter-spacing: .025em;
+    color: #7a7a7a;
+    line-height: 135%;
+    overflow: hidden;
+    transition: ease-in-out .2s;
+}
+.accordeon__text:hover{
+    color: #0e5cd1;
+    text-decoration: line-through;
+}
 .banner {
     margin-top: 116px;
 }
