@@ -79,6 +79,7 @@ button {
     color: inherit;
     font-family: inherit;
 }
+<<<<<<< HEAD
 ::-webkit-scrollbar {
     width:10px;
 }
@@ -95,6 +96,8 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: #0e5cd1; 
 }
+=======
+>>>>>>> 0f411f86c2573207ef03635f5e3f2b9dfb89c265
 .container {
     max-width: 1420px;
     margin: 0 auto;
